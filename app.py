@@ -4,7 +4,7 @@ from flask import Flask,request
 
 app = Flask(__name__)
 
-model_pickle = open("F:/dsml_flask_demo/artifacts/classifier.pkl", "rb")
+model_pickle = open("./artifacts/classifier.pkl", "rb")
 clf = pickle.load(model_pickle)
 
 @app.route("/ping", methods=['GET'])
